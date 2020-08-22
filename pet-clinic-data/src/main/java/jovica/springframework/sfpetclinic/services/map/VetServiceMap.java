@@ -2,11 +2,11 @@ package jovica.springframework.sfpetclinic.services.map;
 
 
 import jovica.springframework.sfpetclinic.model.Vet;
-import jovica.springframework.sfpetclinic.services.CrudService;
+import jovica.springframework.sfpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Vet findById(Long id) {
