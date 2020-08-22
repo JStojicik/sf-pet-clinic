@@ -4,8 +4,6 @@ import jovica.springframework.sfpetclinic.model.Owner;
 import jovica.springframework.sfpetclinic.model.Vet;
 import jovica.springframework.sfpetclinic.services.OwnerService;
 import jovica.springframework.sfpetclinic.services.VetService;
-import jovica.springframework.sfpetclinic.services.map.OwnerServiceMap;
-import jovica.springframework.sfpetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -14,9 +12,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
@@ -30,7 +28,7 @@ public class DataLoader implements CommandLineRunner {
         Owner owner2 = new Owner();
         owner2.setId(2L);
         owner2.setFirstName("Fiona");
-        owner2.setLastName("Glenanne");
+        owner2.setLastName("Glennie");
         ownerService.save(owner2);
 
         System.out.println("Loaded Owners....");

@@ -2,9 +2,10 @@ package jovica.springframework.sfpetclinic.services.map;
 
 import jovica.springframework.sfpetclinic.model.Pet;
 import jovica.springframework.sfpetclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
