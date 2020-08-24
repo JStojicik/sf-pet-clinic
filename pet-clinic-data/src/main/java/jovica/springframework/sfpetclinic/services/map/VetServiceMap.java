@@ -1,13 +1,21 @@
 package jovica.springframework.sfpetclinic.services.map;
 
 
+import jovica.springframework.sfpetclinic.model.Specialty;
 import jovica.springframework.sfpetclinic.model.Vet;
+import jovica.springframework.sfpetclinic.services.SpecialtyService;
 import jovica.springframework.sfpetclinic.services.VetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
+
 @Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+    private final SpecialtyService specialtyService;
+
+    public VetServiceMap(SpecialtyService specialtyService) {
+        this.specialtyService = specialtyService;
+    }
 
     @Override
     public Vet findById(Long id) {
@@ -21,6 +29,14 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 
     @Override
     public Vet save(Vet vet) {
+        if (vet.getSpecialties().size() > 0) {
+            vet.getSpecialties().forEach(specialty -> {
+                if (specialty.getId() == null) {
+                    Specialty savedSpecialty = specialtyService.save(specialty);
+                    specialty.setId(savedSpecialty.getId());
+                }
+            });
+        }
         return super.save(vet);
     }
 
