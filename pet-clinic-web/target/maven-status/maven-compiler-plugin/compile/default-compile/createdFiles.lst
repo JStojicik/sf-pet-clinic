@@ -1,1 +1,5 @@
+jovica\springframework\sfpetclinic\controllers\IndexController.class
 jovica\springframework\sfpetclinic\SfPetClinicApplication.class
+jovica\springframework\sfpetclinic\controllers\VetController.class
+jovica\springframework\sfpetclinic\bootstrap\DataLoader.class
+jovica\springframework\sfpetclinic\controllers\OwnerController.class

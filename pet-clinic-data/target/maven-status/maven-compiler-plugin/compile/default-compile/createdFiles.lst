@@ -1,5 +1,14 @@
+jovica\springframework\sfpetclinic\model\BaseEntity.class
+jovica\springframework\sfpetclinic\services\map\VetServiceMap.class
+jovica\springframework\sfpetclinic\services\OwnerService.class
+jovica\springframework\sfpetclinic\services\CrudService.class
 jovica\springframework\sfpetclinic\model\Owner.class
 jovica\springframework\sfpetclinic\model\Vet.class
+jovica\springframework\sfpetclinic\services\map\OwnerServiceMap.class
 jovica\springframework\sfpetclinic\model\Pet.class
 jovica\springframework\sfpetclinic\model\Person.class
+jovica\springframework\sfpetclinic\services\map\AbstractMapService.class
+jovica\springframework\sfpetclinic\services\VetService.class
+jovica\springframework\sfpetclinic\services\map\PetServiceMap.class
+jovica\springframework\sfpetclinic\services\PetService.class
 jovica\springframework\sfpetclinic\model\PetType.class
