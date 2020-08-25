@@ -2,11 +2,13 @@ package jovica.springframework.sfpetclinic.services.map;
 
 import jovica.springframework.sfpetclinic.model.Visit;
 import jovica.springframework.sfpetclinic.services.VisitService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
 
 
