@@ -11,10 +11,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class OwnerMapServiceTest {
-    @Autowired
-    OwnerMapService ownerMapService;
     final Long ownerId = 1L;
     final String lastName = "smith";
+    @Autowired
+    OwnerMapService ownerMapService;
 
     @BeforeEach
     void setUp() {
@@ -64,8 +64,8 @@ class OwnerMapServiceTest {
 
     @Test
     void findByLastName() {
-        Owner smith= ownerMapService.findByLastName(lastName);
+        Owner smith = ownerMapService.findByLastName(lastName);
         assertNotNull(smith);
-        assertEquals(ownerId,smith.getId());
+        assertEquals(ownerId, smith.getId());
     }
 }

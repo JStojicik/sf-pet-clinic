@@ -92,6 +92,6 @@ class OwnerSDJpaServiceTest {
     @Test
     void deleteById() {
         service.deleteById(1L);
-        verify(ownerRepository, times(1 )).deleteById(anyLong());
+        verify(ownerRepository, times(1)).deleteById(anyLong());
     }
 }
